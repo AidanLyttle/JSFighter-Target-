@@ -18,6 +18,7 @@ let controls;
 let graphics;
 let bars;
 
+
 // Game parameters
 const START_HP = 40; // The amount of HP each player starts with
 const START_SP = 10; // The amount of SP each player starts with
@@ -57,10 +58,10 @@ class Fighter {
             // Reduce damage to half
             damage = Math.round(damage * DODGE_MULTI);
             // Show the target's dodge graphic
-            updateGFX(target.charaName, 'dodge')
+            updateGFX(target.charaName, 'weave')
         } else {
             // Show the target's hit graphic
-            updateGFX(target.charaName, 'hit')
+            updateGFX(target.charaName, 'ah, pop')
         }
         // Announce damage and show this fighter's attack graphics
         output.innerHTML += `${this.name} did <span class="damageColor">${damage}</span> damage!<br>`;
